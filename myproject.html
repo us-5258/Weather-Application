@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindful Mornings</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #f7cac9, #92a8d1);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #5d5d5d;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #6b5b95;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #fefbd8;
+      padding: 4px 8px;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #034f84;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #92a8d1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #6b5b95;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Start Your Day Right ☀️</h1>
+    <p>Welcome to <strong class="highlight">Mindful Mornings</strong> — a landing page about cultivating a peaceful and productive start to your day.</p>
+
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773" alt="Morning routine" />
+
+    <hr />
+
+    <h2>Why Morning Routines Matter</h2>
+    <p><em>A good morning sets the tone for your entire day.</em> From journaling to stretching to sipping a warm cup of tea — every mindful habit counts.</p>
+
+    <p>Learn more at <a href="https://github.com/us-5258" target="_blank">Visit Github Link</a>.</p>
+
+    <hr />
+
+    <h2>✨ Share Your Morning Habit</h2>
+    <p>Click the button below to share your favorite habit.</p>
+
+    <button id="habitButton">Share Your Habit</button>
+
+    <br /><br />
+
+    <span id="userHabit" class="highlight"></span>
+  </div>
+
+  <script>
+    let button = document.getElementById('habitButton');
+
+    button.addEventListener('click', function() {
+      let habit = prompt("What's one morning habit you love?");
+      if (habit) {
+        alert("Awesome! " + habit + " is a great habit.");
+        document.getElementById('userHabit').textContent = "You love: " + habit;
+      } else {
+        alert("Try again — your habit matters!");
+      }
+    });
+  </script>
+
+</body>
+</html>
